@@ -1,0 +1,106 @@
+nav {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  background-color: #ffffffca;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  border-bottom: 3px solid var(--light-gray);
+  z-index: 999;
+}
+nav .left {
+  width: 150px;
+  margin-top: 10px;
+}
+nav .center {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+nav .center a {
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  transform: translateY(15px);
+}
+nav .center a:hover {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 3px solid var(--purple);
+  color: var(--purple);
+  transform: translateY(5px) scale(0.9);
+}
+nav .center a.active {
+  border: 3px solid var(--purple);
+  color: var(--white);
+  background-color: var(--purple);
+  transform: translateY(5px);
+}
+nav .right {
+  margin-top: 10px;
+}
+nav .right .shopping-bag {
+  width: 39px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+nav .right .cart {
+  position: relative;
+}
+nav .right .cart-count {
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 50%;
+}
+nav .right .shopping-bag:hover {
+  transform: scale(1.05);
+}
+nav .right .user .user-icon {
+  font-size: 2.3rem;
+  color: var(--text);
+  transition: 0.3s;
+}
+nav .right .user .user-icon:hover {
+  transform: scale(1.05);
+  color: var(--purple);
+}
+
+/* =================> MEDIA Q <================= */
+@media (max-width: 1100px) {
+  nav .center {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  nav {
+    padding: 0px 15px 0px 10px;
+  }
+  nav .left {
+    width: 130px;
+    margin-top: 5px;
+  }
+  nav .right .shopping-bag {
+    width: 30px;
+  }
+  nav .right .user-icon {
+    font-size: 1.9rem !important;
+  }
+}
